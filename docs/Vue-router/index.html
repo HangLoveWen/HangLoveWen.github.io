@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue-RouterAPI学习 | blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.a5a0d673.css" as="style"><link rel="preload" href="/assets/js/app.49e1a3ce.js" as="script"><link rel="preload" href="/assets/js/3.08e74d92.js" as="script"><link rel="preload" href="/assets/js/1.f96517fa.js" as="script"><link rel="preload" href="/assets/js/29.80baa677.js" as="script"><link rel="prefetch" href="/assets/js/10.9438aad1.js"><link rel="prefetch" href="/assets/js/100.8dd54d46.js"><link rel="prefetch" href="/assets/js/101.bf63c099.js"><link rel="prefetch" href="/assets/js/102.d445ee4c.js"><link rel="prefetch" href="/assets/js/103.723f6875.js"><link rel="prefetch" href="/assets/js/104.ee59e3b8.js"><link rel="prefetch" href="/assets/js/105.1057baec.js"><link rel="prefetch" href="/assets/js/106.0b5dbc23.js"><link rel="prefetch" href="/assets/js/107.59d1fd05.js"><link rel="prefetch" href="/assets/js/108.d08912da.js"><link rel="prefetch" href="/assets/js/109.562d0b30.js"><link rel="prefetch" href="/assets/js/11.eb68d312.js"><link rel="prefetch" href="/assets/js/110.93c76524.js"><link rel="prefetch" href="/assets/js/111.3b1988a5.js"><link rel="prefetch" href="/assets/js/112.e8d02735.js"><link rel="prefetch" href="/assets/js/113.edfbeb34.js"><link rel="prefetch" href="/assets/js/114.d9b5e2f1.js"><link rel="prefetch" href="/assets/js/115.f349ca91.js"><link rel="prefetch" href="/assets/js/116.dec980df.js"><link rel="prefetch" href="/assets/js/117.0ad722f1.js"><link rel="prefetch" href="/assets/js/118.c3e32d60.js"><link rel="prefetch" href="/assets/js/119.9177d66b.js"><link rel="prefetch" href="/assets/js/12.8f8e7da8.js"><link rel="prefetch" href="/assets/js/120.a871380d.js"><link rel="prefetch" href="/assets/js/121.d342fab1.js"><link rel="prefetch" href="/assets/js/122.5d1d21f9.js"><link rel="prefetch" href="/assets/js/123.f38573fe.js"><link rel="prefetch" href="/assets/js/124.70d343cc.js"><link rel="prefetch" href="/assets/js/125.47512aba.js"><link rel="prefetch" href="/assets/js/126.19d4b28d.js"><link rel="prefetch" href="/assets/js/127.f02e9abd.js"><link rel="prefetch" href="/assets/js/128.9ff53dba.js"><link rel="prefetch" href="/assets/js/129.1a9b96ce.js"><link rel="prefetch" href="/assets/js/13.9df043b6.js"><link rel="prefetch" href="/assets/js/130.ad358207.js"><link rel="prefetch" href="/assets/js/131.6f3db2ea.js"><link rel="prefetch" href="/assets/js/132.c0b8de85.js"><link rel="prefetch" href="/assets/js/133.d701bb19.js"><link rel="prefetch" href="/assets/js/134.bdf165e4.js"><link rel="prefetch" href="/assets/js/135.6852a8ea.js"><link rel="prefetch" href="/assets/js/136.e6d35c8d.js"><link rel="prefetch" href="/assets/js/137.f2895300.js"><link rel="prefetch" href="/assets/js/138.92aff3f6.js"><link rel="prefetch" href="/assets/js/139.2f05311d.js"><link rel="prefetch" href="/assets/js/14.dc3a92a3.js"><link rel="prefetch" href="/assets/js/140.50b91c22.js"><link rel="prefetch" href="/assets/js/141.02e46986.js"><link rel="prefetch" href="/assets/js/142.af991e36.js"><link rel="prefetch" href="/assets/js/143.4ea8483b.js"><link rel="prefetch" href="/assets/js/144.1b744fa6.js"><link rel="prefetch" href="/assets/js/145.b604bf82.js"><link rel="prefetch" href="/assets/js/146.2a303e5e.js"><link rel="prefetch" href="/assets/js/147.c963d3af.js"><link rel="prefetch" href="/assets/js/148.d96eb540.js"><link rel="prefetch" href="/assets/js/149.c9686a2f.js"><link rel="prefetch" href="/assets/js/15.042e3615.js"><link rel="prefetch" href="/assets/js/150.f3f65aa7.js"><link rel="prefetch" href="/assets/js/151.90a211ee.js"><link rel="prefetch" href="/assets/js/152.91f95dff.js"><link rel="prefetch" href="/assets/js/153.efae5432.js"><link rel="prefetch" href="/assets/js/154.64d9b45e.js"><link rel="prefetch" href="/assets/js/155.f59745e0.js"><link rel="prefetch" href="/assets/js/156.84069ceb.js"><link rel="prefetch" href="/assets/js/157.64ccff44.js"><link rel="prefetch" href="/assets/js/158.8a945b80.js"><link rel="prefetch" href="/assets/js/159.6dcac5ea.js"><link rel="prefetch" href="/assets/js/16.438ef3f0.js"><link rel="prefetch" href="/assets/js/160.9a8eafe3.js"><link rel="prefetch" href="/assets/js/161.8a264025.js"><link rel="prefetch" href="/assets/js/162.47e6259f.js"><link rel="prefetch" href="/assets/js/163.21f14c87.js"><link rel="prefetch" href="/assets/js/164.a971743c.js"><link rel="prefetch" href="/assets/js/165.a200029e.js"><link rel="prefetch" href="/assets/js/166.06663ac5.js"><link rel="prefetch" href="/assets/js/167.71decf18.js"><link rel="prefetch" href="/assets/js/168.9e73e5f2.js"><link rel="prefetch" href="/assets/js/169.faf9be72.js"><link rel="prefetch" href="/assets/js/17.3be2bb2c.js"><link rel="prefetch" href="/assets/js/170.25d1840f.js"><link rel="prefetch" href="/assets/js/171.3bd47b4e.js"><link rel="prefetch" href="/assets/js/172.0bf6f800.js"><link rel="prefetch" href="/assets/js/173.abd4b877.js"><link rel="prefetch" href="/assets/js/174.c0772efa.js"><link rel="prefetch" href="/assets/js/175.6ec3af91.js"><link rel="prefetch" href="/assets/js/176.f7bd05b2.js"><link rel="prefetch" href="/assets/js/177.1d4aabe3.js"><link rel="prefetch" href="/assets/js/178.849c3be2.js"><link rel="prefetch" href="/assets/js/179.7da3ffff.js"><link rel="prefetch" href="/assets/js/18.d23a38c8.js"><link rel="prefetch" href="/assets/js/180.99632a3b.js"><link rel="prefetch" href="/assets/js/181.6864bef2.js"><link rel="prefetch" href="/assets/js/182.f48a9668.js"><link rel="prefetch" href="/assets/js/183.f8d7a705.js"><link rel="prefetch" href="/assets/js/184.49a8354c.js"><link rel="prefetch" href="/assets/js/185.2288bdbf.js"><link rel="prefetch" href="/assets/js/186.23b02fcb.js"><link rel="prefetch" href="/assets/js/187.2da5632b.js"><link rel="prefetch" href="/assets/js/188.112ae469.js"><link rel="prefetch" href="/assets/js/189.c881d327.js"><link rel="prefetch" href="/assets/js/19.e694e09b.js"><link rel="prefetch" href="/assets/js/190.c2e1b9bb.js"><link rel="prefetch" href="/assets/js/191.68376492.js"><link rel="prefetch" href="/assets/js/192.8e048462.js"><link rel="prefetch" href="/assets/js/193.d3f747de.js"><link rel="prefetch" href="/assets/js/194.37d9b1e3.js"><link rel="prefetch" href="/assets/js/195.ceea3ca9.js"><link rel="prefetch" href="/assets/js/196.c77adbc4.js"><link rel="prefetch" href="/assets/js/197.9d9f0abe.js"><link rel="prefetch" href="/assets/js/198.030fd5e8.js"><link rel="prefetch" href="/assets/js/199.d98fb61b.js"><link rel="prefetch" href="/assets/js/20.4aba7ea4.js"><link rel="prefetch" href="/assets/js/21.8c1cf341.js"><link rel="prefetch" href="/assets/js/22.39d7ae64.js"><link rel="prefetch" href="/assets/js/23.9534d2cd.js"><link rel="prefetch" href="/assets/js/24.362d36d8.js"><link rel="prefetch" href="/assets/js/25.b6bdd1de.js"><link rel="prefetch" href="/assets/js/26.2a5ca275.js"><link rel="prefetch" href="/assets/js/27.1e87554c.js"><link rel="prefetch" href="/assets/js/28.1d0f8df3.js"><link rel="prefetch" href="/assets/js/30.e280d08a.js"><link rel="prefetch" href="/assets/js/31.b0f7e80b.js"><link rel="prefetch" href="/assets/js/32.ca5356e9.js"><link rel="prefetch" href="/assets/js/33.b6d68973.js"><link rel="prefetch" href="/assets/js/34.8588d68d.js"><link rel="prefetch" href="/assets/js/35.1837a4d2.js"><link rel="prefetch" href="/assets/js/36.4d5ec3f6.js"><link rel="prefetch" href="/assets/js/37.c259abcf.js"><link rel="prefetch" href="/assets/js/38.e6493510.js"><link rel="prefetch" href="/assets/js/39.95ff1e42.js"><link rel="prefetch" href="/assets/js/4.6ccf2801.js"><link rel="prefetch" href="/assets/js/40.3dcca1db.js"><link rel="prefetch" href="/assets/js/41.79a8214f.js"><link rel="prefetch" href="/assets/js/42.4d1d3cc3.js"><link rel="prefetch" href="/assets/js/43.c6b1ca87.js"><link rel="prefetch" href="/assets/js/44.9bfefacd.js"><link rel="prefetch" href="/assets/js/45.9919b7c7.js"><link rel="prefetch" href="/assets/js/46.f074ce56.js"><link rel="prefetch" href="/assets/js/47.7c616d87.js"><link rel="prefetch" href="/assets/js/48.749df06e.js"><link rel="prefetch" href="/assets/js/49.b62bc573.js"><link rel="prefetch" href="/assets/js/5.d9c29fca.js"><link rel="prefetch" href="/assets/js/50.904b03de.js"><link rel="prefetch" href="/assets/js/51.adf1eec1.js"><link rel="prefetch" href="/assets/js/52.7242adf7.js"><link rel="prefetch" href="/assets/js/53.d65780b1.js"><link rel="prefetch" href="/assets/js/54.23a702a3.js"><link rel="prefetch" href="/assets/js/55.d6f34e10.js"><link rel="prefetch" href="/assets/js/56.0128783e.js"><link rel="prefetch" href="/assets/js/57.aafe2151.js"><link rel="prefetch" href="/assets/js/58.fdb10b70.js"><link rel="prefetch" href="/assets/js/59.92b7d4a5.js"><link rel="prefetch" href="/assets/js/6.510ee365.js"><link rel="prefetch" href="/assets/js/60.b50a971d.js"><link rel="prefetch" href="/assets/js/61.f5a607d7.js"><link rel="prefetch" href="/assets/js/62.9b79fc56.js"><link rel="prefetch" href="/assets/js/63.62e28c7f.js"><link rel="prefetch" href="/assets/js/64.ca0658f3.js"><link rel="prefetch" href="/assets/js/65.d01e4b2d.js"><link rel="prefetch" href="/assets/js/66.d353c0fe.js"><link rel="prefetch" href="/assets/js/67.e0721639.js"><link rel="prefetch" href="/assets/js/68.5d7d3fd0.js"><link rel="prefetch" href="/assets/js/69.d8882926.js"><link rel="prefetch" href="/assets/js/7.79ac4d06.js"><link rel="prefetch" href="/assets/js/70.a22638f9.js"><link rel="prefetch" href="/assets/js/71.bfacadc4.js"><link rel="prefetch" href="/assets/js/72.01cb5a29.js"><link rel="prefetch" href="/assets/js/73.a22075a7.js"><link rel="prefetch" href="/assets/js/74.b9f263a2.js"><link rel="prefetch" href="/assets/js/75.6cab1a85.js"><link rel="prefetch" href="/assets/js/76.1a4f29b7.js"><link rel="prefetch" href="/assets/js/77.741c1fa3.js"><link rel="prefetch" href="/assets/js/78.66e9bb60.js"><link rel="prefetch" href="/assets/js/79.a011114a.js"><link rel="prefetch" href="/assets/js/8.ddfc50a4.js"><link rel="prefetch" href="/assets/js/80.86ace22f.js"><link rel="prefetch" href="/assets/js/81.90de8cac.js"><link rel="prefetch" href="/assets/js/82.64fff6b7.js"><link rel="prefetch" href="/assets/js/83.f80305c4.js"><link rel="prefetch" href="/assets/js/84.25b304f4.js"><link rel="prefetch" href="/assets/js/85.48aaa787.js"><link rel="prefetch" href="/assets/js/86.244e6b0a.js"><link rel="prefetch" href="/assets/js/87.8269cc68.js"><link rel="prefetch" href="/assets/js/88.56e73929.js"><link rel="prefetch" href="/assets/js/89.9376e88f.js"><link rel="prefetch" href="/assets/js/9.b4190635.js"><link rel="prefetch" href="/assets/js/90.6be72944.js"><link rel="prefetch" href="/assets/js/91.794e123e.js"><link rel="prefetch" href="/assets/js/92.30f9675e.js"><link rel="prefetch" href="/assets/js/93.3a073f97.js"><link rel="prefetch" href="/assets/js/94.0be11c4c.js"><link rel="prefetch" href="/assets/js/95.11fdd108.js"><link rel="prefetch" href="/assets/js/96.e4a2a804.js"><link rel="prefetch" href="/assets/js/97.85fbaba3.js"><link rel="prefetch" href="/assets/js/98.a1d511af.js"><link rel="prefetch" href="/assets/js/99.6d243142.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a5a0d673.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>blog</h3> <p class="description" data-v-59e6cb88></p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>马行</span>
+          
+        <span data-v-59e6cb88>2021 - </span>
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="blog" class="logo"> <span class="site-name">blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="undefined"></i>
+  后端
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Docs
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/lodash/" class="nav-link"><i class="undefined"></i>
+  lodash
+</a></li><li class="dropdown-item"><!----> <a href="/docs/G2/" class="nav-link"><i class="undefined"></i>
+  G2
+</a></li><li class="dropdown-item"><!----> <a href="/docs/vue2/" class="nav-link"><i class="undefined"></i>
+  vue2
+</a></li><li class="dropdown-item"><!----> <a href="/docs/vue3/" class="nav-link"><i class="undefined"></i>
+  vue3
+</a></li><li class="dropdown-item"><!----> <a href="/docs/xmvue3/" class="nav-link"><i class="undefined"></i>
+  小满vue3
+</a></li><li class="dropdown-item"><!----> <a href="/docs/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/docs/typescript/" class="nav-link"><i class="undefined"></i>
+  typescript
+</a></li><li class="dropdown-item"><!----> <a href="/docs/Regex/" class="nav-link"><i class="undefined"></i>
+  Regex
+</a></li><li class="dropdown-item"><!----> <a href="/docs/Vue-router/" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="undefined"></i>
+  Vue-router
+</a></li><li class="dropdown-item"><!----> <a href="/docs/Internet/" class="nav-link"><i class="undefined"></i>
+  Internet
+</a></li><li class="dropdown-item"><!----> <a href="/docs/weixin/" class="nav-link"><i class="undefined"></i>
+  Weixin
+</a></li><li class="dropdown-item"><!----> <a href="/docs/data structure/" class="nav-link"><i class="undefined"></i>
+  Data Structure
+</a></li><li class="dropdown-item"><!----> <a href="/docs/nodejs/" class="nav-link"><i class="undefined"></i>
+  NodeJS
+</a></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/HangLoveWen" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://space.bilibili.com/478356471" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-bilibili"></i>
+  BiliBili
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    马行
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>181</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>4</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="undefined"></i>
+  后端
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Docs
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/lodash/" class="nav-link"><i class="undefined"></i>
+  lodash
+</a></li><li class="dropdown-item"><!----> <a href="/docs/G2/" class="nav-link"><i class="undefined"></i>
+  G2
+</a></li><li class="dropdown-item"><!----> <a href="/docs/vue2/" class="nav-link"><i class="undefined"></i>
+  vue2
+</a></li><li class="dropdown-item"><!----> <a href="/docs/vue3/" class="nav-link"><i class="undefined"></i>
+  vue3
+</a></li><li class="dropdown-item"><!----> <a href="/docs/xmvue3/" class="nav-link"><i class="undefined"></i>
+  小满vue3
+</a></li><li class="dropdown-item"><!----> <a href="/docs/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/docs/typescript/" class="nav-link"><i class="undefined"></i>
+  typescript
+</a></li><li class="dropdown-item"><!----> <a href="/docs/Regex/" class="nav-link"><i class="undefined"></i>
+  Regex
+</a></li><li class="dropdown-item"><!----> <a href="/docs/Vue-router/" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="undefined"></i>
+  Vue-router
+</a></li><li class="dropdown-item"><!----> <a href="/docs/Internet/" class="nav-link"><i class="undefined"></i>
+  Internet
+</a></li><li class="dropdown-item"><!----> <a href="/docs/weixin/" class="nav-link"><i class="undefined"></i>
+  Weixin
+</a></li><li class="dropdown-item"><!----> <a href="/docs/data structure/" class="nav-link"><i class="undefined"></i>
+  Data Structure
+</a></li><li class="dropdown-item"><!----> <a href="/docs/nodejs/" class="nav-link"><i class="undefined"></i>
+  NodeJS
+</a></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/HangLoveWen" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://space.bilibili.com/478356471" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-bilibili"></i>
+  BiliBili
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/docs/Vue-router/" aria-current="page" class="active sidebar-link">Vue-RouterAPI学习</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Vue-RouterAPI学习</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>马行</span>
+          
+        <span data-v-59e6cb88>2021 - </span>
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">Vue-RouterAPI学习</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>马行</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>11/21/2022</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="vue-router"><a href="#vue-router" class="header-anchor">#</a> vue-router</h2> <p>个人理解：Vue 中的路由相当于 pc 里面的<a href="https://so.csdn.net/so/search?q=%E9%94%9A%E7%82%B9&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreferrer">锚点<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>超链接，如果点击了页面转向哪，也有点像 ajax。</p> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <p><code>npm install vue-router</code></p> <h2 id="开始"><a href="#开始" class="header-anchor">#</a> 开始</h2> <p>用 Vue.js + vue-router 创建单页应用，是非常简单的。使用 Vue.js 时，我们就已经把组件组合成一个应用了，当你要把 vue-router 加进来，只需要配置组件和路由映射，然后告诉 vue-router 在哪里渲染他们。
+组件 → 路由 → 渲染地方</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div id=&quot;app&quot;&gt;
+  &lt;h1&gt;Hello App!&lt;/h1&gt;
+  &lt;p&gt;
+    &lt;!-- 使用 router-link 组件来导航. --&gt;
+    &lt;!-- 通过传入 `to` 属性指定链接. --&gt;
+    &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;
+    &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt;
+    &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt;
+  &lt;/p&gt;
+  &lt;!-- 路由出口 --&gt;
+  &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;
+  &lt;router-view&gt;&lt;/router-view&gt;
+&lt;/div&gt;12345678910111213
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// 0. 如果使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)
+
+// 1. 定义（路由）组件。
+// 可以从其他文件 import 进来
+const Foo = { template: '&lt;div&gt;foo&lt;/div&gt;' }
+const Bar = { template: '&lt;div&gt;bar&lt;/div&gt;' }
+
+// 2. 定义路由
+// 每个路由应该映射一个组件。 其中&quot;component&quot; 可以是
+// 通过 Vue.extend() 创建的组件构造器，
+// 或者，只是一个组件配置对象。
+// 我们晚点再讨论嵌套路由。
+const routes = [
+    { path: '/foo', component: Foo },
+    { path: '/bar', component: Bar }
+]
+
+// 3. 创建 router 实例，然后传 `routes` 配置
+// 你还可以传别的配置参数, 不过先这么简单着吧。
+const router = new VueRouter({
+  routes // （缩写）相当于 routes: routes
+})
+
+// 4. 创建和挂载根实例。
+// 记得要通过 router 配置参数注入路由，
+// 从而让整个应用都有路由功能
+const app = new Vue({
+  router
+}).$mount('#app')
+
+// 现在，应用已经启动了！12345678910111213141516171819202122232425262728293031
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h2 id="动态路由匹配"><a href="#动态路由匹配" class="header-anchor">#</a> 动态路由匹配</h2> <p>我们经常需要把某种模式匹配到的所有路由，全都映射到同个组件。例如，我们有一个 User 组件，对于所有 ID 各不相同的用户，都要使用这个组件来渲染。那么，我们可以在 vue-router 的路由路径中使用动态路径参数来达到这个效果。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const User = {
+  template: '&lt;div&gt;User&lt;/div&gt;'
+}
+const router = new VueRouter({
+    routes: [
+        {path: '/user/:id', component: User}
+    ]
+})12345678
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>路径参数用：表示。
+一个路由中可以设置多段路径参数，对应的值都会设置到<strong>r</strong>o<strong>u</strong>t<strong>e</strong>.<strong>p</strong>a<strong>r</strong>a<strong>m</strong>s。除了 route.params。除了 route.params 外，<strong>r</strong>o<strong>u</strong>t<strong>e</strong>对象还提供了其它有用的信息，例如 route 对象还提供了其它有用的信息，例如 route.query，<strong>r</strong>o<strong>u</strong>t<strong>e</strong>.<strong>h</strong>a<strong>s</strong>h 等。当使用路由参数时，组件实例会被复用，这就意味着组件的生命周期钩子不会再被调用。如果想对路由参数的变化作出响应，可以简单地<strong>w</strong>a<strong>t</strong>c<strong>h</strong>route.hash 等。当使用路由参数时，组件实例会被复用，这就意味着组件的生命周期钩子不会再被调用。如果想对路由参数的变化作出响应，可以简单地 watchroute 对象。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const User = {
+    template: '...',
+    watch: {
+        '$route' (to, from) {
+
+        }
+    }
+}12345678
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="嵌套路由"><a href="#嵌套路由" class="header-anchor">#</a> 嵌套路由</h2> <p>组件模板中有可能有自己的出口，要在嵌套的出口中渲染组件，需要在 VueRouter 的参数中使用 children 配置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+    router: [
+        {path: '/user/:id', component: User,
+            children: [
+                {
+                    path: 'profile',
+                    component: UserProfile
+                },
+                {
+                    path: 'posts',
+                    component: UserPosts
+                }
+            ]
+        }
+    ]
+})12345678910111213141516
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p><strong>要注意，以/开头的嵌套路径会被当作根路径。这让你充分的使用嵌套组件而无须设置嵌套的路径。</strong></p> <h2 id="编程式的导航"><a href="#编程式的导航" class="header-anchor">#</a> 编程式的导航</h2> <p>除了使用创建 a 标签来定义导航链接，我们还可以借助 router 的实例方法，通过编写代码来实现。
+<strong>router.push()</strong>
+这种方法会向 history 栈中添加记录
+router.push() ==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 字符串
+router.push('home')
+
+// 对象
+router.push({ path: 'home' })
+
+// 命名的路由
+router.push({ name: 'user', params: { userId: 123 }})
+
+// 带查询参数，变成 /register?plan=private
+router.push({ path: 'register', query: { plan: 'private' }})1234567891011
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><strong>router.replace(location)</strong>
+router.replace(location) ==
+<strong>router.go(n)</strong>
+这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，类似 window.history.go(n)</p> <h2 id="命名路由"><a href="#命名路由" class="header-anchor">#</a> 命名路由</h2> <p>主要是为了通过一个名称来标识一个路由显得更方便一些。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+  routes: [
+    {
+      path: '/user/:userId',
+      name: 'user',
+      component: User
+    }
+  ]
+})123456789
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="命名视图"><a href="#命名视图" class="header-anchor">#</a> 命名视图</h2> <p>有时想同时展示多个视图。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;router-view class=&quot;view one&quot;&gt;&lt;/router-view&gt;
+&lt;router-view class=&quot;view two&quot; name=&quot;a&quot;&gt;&lt;/router-view&gt;
+&lt;router-view class=&quot;view three&quot; name=&quot;b&quot;&gt;&lt;/router-view&gt;
+const router = new VueRouter({
+  routes: [
+    {
+      path: '/',
+      components: {
+        default: Foo,
+        a: Bar,
+        b: Baz
+      }
+    }
+  ]
+})123456789101112131415
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="重定向和别名"><a href="#重定向和别名" class="header-anchor">#</a> 重定向和别名</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+    routes: [
+        {path: '/a', redirect: '/b'}
+    ]
+})12345
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>重定向的目标也可以是一个命名的路由：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+    routes: [
+        {path: '/a', redirect: {name: 'foo'}}
+    ]
+})12345
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>甚至是一个方法</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+  routes: [
+    { path: '/a', redirect: to =&gt; {
+      // 方法接收 目标路由 作为参数
+      // return 重定向的 字符串路径/路径对象
+    }}
+  ]
+})12345678
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="别名"><a href="#别名" class="header-anchor">#</a> 别名</h2> <p><strong>/a 的别名是 /b，意味着，当用户访问 /b 时，URL 会保持为 /b，但是路由匹配则为 /a，就像用户访问 /a 一样。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+  routes: [
+    { path: '/a', component: A, alias: '/b' }
+  ]
+})12345
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="html5-history-模式"><a href="#html5-history-模式" class="header-anchor">#</a> HTML5 History 模式</h2> <p>使用 history 模式时，URL 就是正常的 url。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+  mode: 'history',
+  routes: [...]
+})1234
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="导航钩子"><a href="#导航钩子" class="header-anchor">#</a> 导航钩子</h2> <p>正如其名，vue-router 提供的导航钩子主要用来拦截导航，让它完成跳转或取消。有多种方式可以在路由导航发生时执行钩子： 全局的，单个路由独享的，或者组件级的。
+<strong>全局钩子</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({ ... })
+
+router.beforeEach((to, from, next) =&gt; {
+  // ...
+})
+每个钩子方法接收三个参数：
+
+    to: Route: 即将要进入的目标 路由对象
+
+    from: Route: 当前导航正要离开的路由
+
+    next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。
+
+        next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 confirmed （确认的）。
+
+        next(false): 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 from 路由对应的地址。
+
+        next('/') 或者 next({ path: '/' }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。
+
+确保要调用 next 方法，否则钩子就不会被 resolved。1234567891011121314151617181920
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p><strong>某个路由独享的钩子</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+  routes: [
+    {
+      path: '/foo',
+      component: Foo,
+      beforeEnter: (to, from, next) =&gt; {
+        // ...
+      }
+    }
+  ]
+})1234567891011
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><strong>组件内的钩子</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const Foo = {
+  template: `...`,
+  beforeRouteEnter (to, from, next) {
+    // 在渲染该组件的对应路由被 confirm 前调用
+    // 不！能！获取组件实例 `this`
+    // 因为当钩子执行前，组件实例还没被创建
+  },
+  beforeRouteUpdate (to, from, next) {
+    // 在当前路由改变，但是改组件被复用时调用
+    // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，
+    // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。
+    // 可以访问组件实例 `this`
+  },
+  beforeRouteLeave (to, from, next) {
+    // 导航离开该组件的对应路由时调用
+    // 可以访问组件实例 `this`
+  }
+}123456789101112131415161718
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p><strong>路由元信息</strong>
+定义路由的时候可以配置 meta 字段</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+  routes: [
+    {
+      path: '/foo',
+      component: Foo,
+      children: [
+        {
+          path: 'bar',
+          component: Bar,
+          // a meta field
+          meta: { requiresAuth: true }
+        }
+      ]
+    }
+  ]
+})12345678910111213141516
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>我们称呼 routes 配置中的每个路由对象为路由记录。路由记录可以是嵌套的，因此，当一个路由匹配成功后，他可能匹配多个路由记录。
+例如，根据上面的路由配置，/foo/bar 这个 URL 将会匹配路由记录以及子路由记录。
+一个路由匹配到的所有路由记录会暴露为<strong>r</strong>o<strong>u</strong>t<strong>e</strong>对象（还有在导航钩子中的<strong>r</strong>o<strong>u</strong>t<strong>e</strong>对象）的 route 对象（还有在导航钩子中的 route 对象）的 route.matched 数组。因此，我们需要遍历$route.matched 来检查路由记录中的 meta 字段。</p> <h2 id="过渡动效"><a href="#过渡动效" class="header-anchor">#</a> 过渡动效</h2> <p>是基本的动态组件，所以我们可以用组件给它添加一些过渡效果。</p> <h2 id="数据获取"><a href="#数据获取" class="header-anchor">#</a> 数据获取</h2> <p>有时候，进入某个路由后，需要从服务器获取数据。例如，在渲染用户信息时，你需要从服务器获取用户的数据，我们可以通过两种方式来实现： 1.导航完成之后获取：先完成导航，然后在接下来的组件生命周期钩子中获取数据，在数据获取期间显示加载中的指示。 2.导航完成之前获取：导航完成前，在路由的 enter 钩子中获取数据，在数据获取成功后执行导航。
+<strong>导航完成后获取数据</strong>
+当你使用这种方式时，我们会马上导航和渲染组件，然后在组件的 created 钩子中获取数据。这让我们有机会再数据获取期间展示一个 loading 状态，还可以在不同视图间展示不同的 loading 状态。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div class=&quot;post&quot;&gt;
+    &lt;div class=&quot;loading&quot; v-if=&quot;loading&quot;&gt;
+      Loading...
+    &lt;/div&gt;
+
+    &lt;div v-if=&quot;error&quot; class=&quot;error&quot;&gt;
+      {{ error }}
+    &lt;/div&gt;
+
+    &lt;div v-if=&quot;post&quot; class=&quot;content&quot;&gt;
+      &lt;h2&gt;{{ post.title }}&lt;/h2&gt;
+      &lt;p&gt;{{ post.body }}&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+export default {
+    data() {
+        return {
+            loading: false,
+            post: null,
+            error: null
+        }
+    },
+    created() {
+        // 组件创建完后获取数据，
+        // 此时data已经被observed了
+        this.fetchData()
+    },
+    watch: {
+        // 如果路由有变化，会再次执行该方法
+        '$route': 'fetchData'
+    },
+    methods: {
+        this.error = this.post =null
+        this.loading =true
+        // replace getPost with your data fetching util/API wrapper
+        getPost(this.$route.params.id, (err ,post) =&gt; {
+            this.loading = false
+            if(err) {
+                this.error = err.toString()
+            } else {
+                this.post = post
+            }
+        })
+    }
+}123456789101112131415161718192021222324252627282930313233343536373839404142434445464748
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br></div></div><p><strong>在导航完成前获取数据</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>export default {
+  data () {
+    return {
+      post: null,
+      error: null
+    }
+  },
+  beforeRouteEnter (to, from, next) {
+    getPost(to.params.id, (err, post) =&gt;
+      if (err) {
+        // display some global error message
+        next(false)
+      } else {
+        next(vm =&gt; {
+          vm.post = post
+        })
+      }
+    })
+  },
+  // 路由改变前，组件就已经渲染完了
+  // 逻辑稍稍不同
+  watch: {
+    $route () {
+      this.post = null
+      getPost(this.$route.params.id, (err, post) =&gt; {
+        if (err) {
+          this.error = err.toString()
+        } else {
+          this.post = post
+        }
+      })
+    }
+  }
+}12345678910111213141516171819202122232425262728293031323334
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><h2 id="滚动行为"><a href="#滚动行为" class="header-anchor">#</a> 滚动行为</h2> <p>使用前端路由，当切换到新路由时，想要页面滚动到顶部，或者是保持原先的滚动位置，就像重新加载页面那样。vue-router 能做到，而且更好，它让你可以自定义路由切换时页面如何滚动。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+  routes: [...],
+  scrollBehavior (to, from, savedPosition) {
+    // return 期望滚动到哪个的位置
+  }
+})123456
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="路由懒加载"><a href="#路由懒加载" class="header-anchor">#</a> 路由懒加载</h2> <p>当打包构建应用时，Javascript 包会变得非常大，影响页面加载。如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应组件，这样就更加高效了。
+结合 Vue 的异步组件和 Webpack 的 code splitting feature，轻松实现路由组件的懒加载。
+我们要做的就是把路由对应的组件定义成异步组件：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const Foo = resolve =&gt; {
+  // require.ensure 是 Webpack 的特殊语法，用来设置 code-split point
+  // （代码分块）
+  require.ensure(['./Foo.vue'], () =&gt; {
+    resolve(require('./Foo.vue'))
+  })
+}1234567
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>或者</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const Foo = resolve =&gt; require(['./Foo.vue'], resolve)1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="api-文档"><a href="#api-文档" class="header-anchor">#</a> API 文档</h2> <p>组件支持用户在具有路由功能的应用中（点击）导航。通过 to 属性指定目标地址，默认渲染成带有正确连接的标签，可以通过配置 tag 属性生成别的标签，另外，当目标路由成功激活时，链接元素自动设置一个表示激活的 CSS 类名。
+但是比起写死的标签要好些，理由如下： 1.无论是在 HTML5history 模式还是 hash 模式，它的表现行为一致，所以当需要切换路由模式，或者在 IE9 降级使用 hash 模式，无须作任何变动。 2.在 HTML5history 模式下，router-link 会拦截点击事件，让浏览器不再重新加载页面。 3.当你在 HTML5history 模式下使用 base 选项后，所有的 to 属性都不需要写（基路径）了。</p> <h3 id="props"><a href="#props" class="header-anchor">#</a> Props</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>### to
+&lt;!-- 字符串 --&gt;
+&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;
+&lt;!-- 渲染结果 --&gt;
+&lt;a href=&quot;home&quot;&gt;Home&lt;/a&gt;
+
+&lt;!-- 使用 v-bind 的 JS 表达式 --&gt;
+&lt;router-link v-bind:to=&quot;'home'&quot;&gt;Home&lt;/router-link&gt;
+
+&lt;!-- 不写 v-bind 也可以，就像绑定别的属性一样 --&gt;
+&lt;router-link :to=&quot;'home'&quot;&gt;Home&lt;/router-link&gt;
+
+&lt;!-- 同上 --&gt;
+&lt;router-link :to=&quot;{ path: 'home' }&quot;&gt;Home&lt;/router-link&gt;
+
+&lt;!-- 命名的路由 --&gt;
+&lt;router-link :to=&quot;{ name: 'user', params: { userId: 123 }}&quot;&gt;User&lt;/router-link&gt;
+
+&lt;!-- 带查询参数，下面的结果为 /register?plan=private --&gt;
+&lt;router-link :to=&quot;{ path: 'register', query: { plan: 'private' }}&quot;&gt;Register&lt;/router-link&gt;1234567891011121314151617181920
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="replace"><a href="#replace" class="header-anchor">#</a> replace</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;router-link :to=&quot;{ path: '/abc'}&quot; replace&gt;&lt;/router-link&gt;1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="append"><a href="#append" class="header-anchor">#</a> append</h3> <p>设置 append 属性后，则在当前路径前添加基路径。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;router-link :to=&quot;{ path: 'relative/path'}&quot; append&gt;&lt;/router-link&gt;1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="tag"><a href="#tag" class="header-anchor">#</a> tag</h3> <p>默认为 a 标签，有时候想要渲染成某种标签，例如</p> <ul><li><p>。于是我们是用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。</p></li> <li><div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;router-link to=&quot;/foo&quot; tag=&quot;li&quot;&gt;foo&lt;/router-link&gt;
+&lt;!-- 渲染结果 --&gt;
+&lt;li&gt;foo&lt;/li&gt;123
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="active-class"><a href="#active-class" class="header-anchor">#</a> active-class</h3> <p>默认值是 router-link-active，设置链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 linkActiveClass 来全局配置。</p> <h3 id="exact"><a href="#exact" class="header-anchor">#</a> exact</h3> <p>默认值是 false，是否扩展到全局。</p> <h2 id="router-view"><a href="#router-view" class="header-anchor">#</a> router-view</h2> <p>组件是一个 functional 组件，渲染路径匹配到的视图组件。渲染的组件还可以内嵌自己的，根据嵌套路径，渲染嵌套组件。</p> <h3 id="props-2"><a href="#props-2" class="header-anchor">#</a> Props</h3> <h4 id="name"><a href="#name" class="header-anchor">#</a> name</h4> <p>默认值是 default，如果设置了名称，则会渲染对应的路由配置中 components 下的响应组件。</p> <h4 id="行为表现"><a href="#行为表现" class="header-anchor">#</a> 行为表现</h4> <p>其他属性（非 router-view 使用的属性）都直接传给渲染的组件，很多时候，每个路由的数据都是包含在路由参数中。
+因为它也是个组件，所以可以配合和使用。如果两个结合一起用，要确保在内层使用：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;transition&gt;
+    &lt;keep-alive&gt;
+        &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/keep-alive&gt;
+&lt;/transition&gt;12345
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="路由信息对象"><a href="#路由信息对象" class="header-anchor">#</a> 路由信息对象</h2> <p>route object 是不可变的，每次成功的导航后都会产生一个新的对象。
+$route.path</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>类型: string
+
+字符串，对应当前路由的路径，总是解析为绝对路径，如 &quot;/foo/bar&quot;。
+123
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>$route.params</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>类型: Object
+1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>一个 key/value 对象，包含了 动态片段 和 全匹配片段，如果没有路由参数，就是一个空对象。
+$route.query</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>类型: Object
+
+一个 key/value 对象，表示 URL 查询参数。例如，对于路径 /foo?user=1，则有 $route.query.user == 1，如果没有查询参数，则是个空对象。
+123
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>$route.hash</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>类型: string
+
+当前路由的 hash 值 (带 #) ，如果没有 hash 值，则为空字符串。
+123
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>$route.fullPath</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>类型: string
+
+完成解析后的 URL，包含查询参数和 hash 的完整路径。
+123
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>$route.matched</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>类型: Array&lt;RouteRecord&gt;
+1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>一个数组，包含当前路由的所有嵌套路径片段的 路由记录 。路由记录就是 routes 配置数组中的对象副本（还有在 children 数组）。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const router = new VueRouter({
+  routes: [
+    // 下面的对象就是 route record
+    { path: '/foo', component: Foo,
+      children: [
+        // 这也是个 route record
+        { path: 'bar', component: Bar }
+      ]
+    }
+  ]
+})1234567891011
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>当 URL 为 /foo/bar，$route.matched 将会是一个包含从上到下的所有对象（副本）。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$route.name1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="router-构造配置"><a href="#router-构造配置" class="header-anchor">#</a> Router 构造配置</h2> <h2 id="router-实例"><a href="#router-实例" class="header-anchor">#</a> Router 实例</h2> <p>当前路由的名称，如果有的话。</p></li></ul></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">3/9/2023, 10:29:21 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.49e1a3ce.js" defer></script><script src="/assets/js/3.08e74d92.js" defer></script><script src="/assets/js/1.f96517fa.js" defer></script><script src="/assets/js/29.80baa677.js" defer></script>
+  </body>
+</html>
